@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../asynchronous_fifo.ip_user_files/bd/fifo/ip/fifo_fifo_generator_0_0/sim/fifo_fifo_generator_0_0.v" \
+"../../../../asynchronous_fifo.ip_user_files/bd/fifo/sim/fifo.v" \
+"../../../../asynchronous_fifo.srcs/sources_1/bd/fifo/hdl/fifo_wrapper.v" \
+"../../../../asynchronous_fifo.srcs/sim_1/new/fifoTest.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

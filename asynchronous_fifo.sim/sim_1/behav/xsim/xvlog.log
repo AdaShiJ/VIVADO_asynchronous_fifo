@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Adaboost/OneDrive/mijn/asynchronous_fifo/asynchronous_fifo/asynchronous_fifo.ip_user_files/bd/fifo/ip/fifo_fifo_generator_0_0/sim/fifo_fifo_generator_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_fifo_generator_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Adaboost/OneDrive/mijn/asynchronous_fifo/asynchronous_fifo/asynchronous_fifo.ip_user_files/bd/fifo/sim/fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Adaboost/OneDrive/mijn/asynchronous_fifo/asynchronous_fifo/asynchronous_fifo.srcs/sources_1/ip/mem/sim/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Adaboost/OneDrive/mijn/asynchronous_fifo/asynchronous_fifo/asynchronous_fifo.srcs/sources_1/bd/fifo/hdl/fifo_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Adaboost/OneDrive/mijn/asynchronous_fifo/asynchronous_fifo/asynchronous_fifo.srcs/sources_1/new/myFIFO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myFIFO
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Adaboost/OneDrive/mijn/asynchronous_fifo/asynchronous_fifo/asynchronous_fifo.srcs/sim_1/new/myFIFOTest.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myFIFOTest

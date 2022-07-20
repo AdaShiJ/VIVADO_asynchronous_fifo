@@ -1,0 +1,28 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port wr_full -pg 1 -y 40 -defaultsOSRD
+preplace port rd_en -pg 1 -y 240 -defaultsOSRD
+preplace port reset_rtl -pg 1 -y 60 -defaultsOSRD
+preplace port read_empty -pg 1 -y 340 -defaultsOSRD
+preplace port sys_clock -pg 1 -y 80 -defaultsOSRD
+preplace port wr_en -pg 1 -y 160 -defaultsOSRD
+preplace portBus wr_din -pg 1 -y 140 -defaultsOSRD
+preplace portBus read_dout -pg 1 -y 360 -defaultsOSRD
+preplace inst fifo_generator_0 -pg 1 -lvl 2 -y 190 -defaultsOSRD
+preplace netloc wr_en_1 1 0 2 NJ 160 NJ
+preplace netloc wr_din_1 1 0 2 NJ 140 NJ
+preplace netloc sys_clock_1 1 0 2 NJ 80 130
+preplace netloc fifo_generator_0_full 1 1 2 160 40 NJ
+preplace netloc rd_en_1 1 0 2 NJ 240 NJ
+preplace netloc fifo_generator_0_dout 1 1 2 160 360 NJ
+preplace netloc fifo_generator_0_empty 1 1 2 150 340 NJ
+preplace netloc reset_rtl_1 1 0 2 NJ 60 140
+levelinfo -pg 1 -10 110 370 540 -top 0 -bot 380
+"
+}
+{
+   "da_board_cnt":"2",
+   "da_clkrst_cnt":"1"
+}

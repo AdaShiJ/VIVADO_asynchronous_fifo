@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../asynchronous_fifo.srcs/sources_1/bd/fifo/ipshared/85a3" \
+"../../../../asynchronous_fifo.ip_user_files/bd/fifo/ip/fifo_fifo_generator_0_0/sim/fifo_fifo_generator_0_0.v" \
+"../../../../asynchronous_fifo.ip_user_files/bd/fifo/ip/fifo_clk_wiz_0/fifo_clk_wiz_0_clk_wiz.v" \
+"../../../../asynchronous_fifo.ip_user_files/bd/fifo/ip/fifo_clk_wiz_0/fifo_clk_wiz_0.v" \
+"../../../../asynchronous_fifo.ip_user_files/bd/fifo/sim/fifo.v" \
+"../../../../asynchronous_fifo.srcs/sources_1/bd/fifo/hdl/fifo_wrapper.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
