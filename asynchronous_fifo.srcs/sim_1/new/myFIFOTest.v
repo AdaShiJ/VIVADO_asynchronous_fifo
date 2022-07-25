@@ -24,6 +24,7 @@ module myFIFOTest(
 );
 
   reg rd_en;
+  reg rd_en_0;
   wire [4:0]read_dout;
   wire read_empty;
   wire [4:0]read_dout_0;
@@ -32,6 +33,7 @@ module myFIFOTest(
   reg reset_rtl_0;
   reg clk;
   reg [4:0]wr_din;
+  reg [4:0]wr_din_0;
   reg wr_en;
   wire wr_full;
   wire wr_full_0;
@@ -51,8 +53,10 @@ module myFIFOTest(
     reset_rtl = 0;
     reset_rtl_0 = 0;
     wr_din = 4'b0;
+    wr_din_0 = 4'b0;
     wr_en = 0;
     rd_en = 0;
+    rd_en_0 = 0;
 
     #10
     #100
@@ -68,40 +72,59 @@ module myFIFOTest(
         reset_rtl_0 = 0;
         wr_en = 1;
         wr_din = 4'b1;
+        wr_din_0 = 4'b1;
     end
     #10    
     @(posedge clk)
     begin
         #1
         rd_en = 1;
+        //rd_en_0 = 1;
         wr_din = 4'd2;
+        wr_din_0 = 4'd2;
     end
     //wr_din = 2;
     #1
     for (i=0;i<16;i=i+1) begin
         @(posedge clk)
             #1
+            rd_en_0 = 1;
             wr_din = 4'b0 + i + 3;
+            wr_din_0 = 4'b0 + i + 3;
     end
     
-    rd_en = 0;  
+    rd_en = 0; 
+    rd_en_0 = 0; 
     wr_din = 12;  
     for (i=2;i<20;i=i+1) begin
         @(posedge clk)
             #1
+            //if (i == 2) begin
+            //    rd_en_0 = 0;
+            //end
             wr_din = 4'b0 + i + 11;
+            wr_din_0 = 4'b0 + i + 11;
     end
     
     rd_en = 1;
-    wr_din = 4'd10;    
+    //rd_en_0 = 1;
+    wr_din = 4'd10;  
+    wr_din_0 = 4'd8;  
     for (i=0;i<20;i=i+1) begin
         @(posedge clk)
             #1
+            if (i == 0) begin
+                rd_en_0 = 1;
+            end
             wr_din = wr_din + 2;
+            wr_din_0 = wr_din_0 + 2;
     end
-    
-    //rd_en = 0;
+
     wr_en = 0;
+    rd_en_0 = 0;
+    
+    #20
+    rd_en = 0;
     
     #1000
     wr_en = 0;
@@ -127,7 +150,7 @@ myFIFO myFIFO_u0
     
 fifo_wrapper fifo_u0 
    (
-    .rd_en(rd_en),
+    .rd_en(rd_en_0),
     .read_dout(read_dout_0),
     .read_empty(read_empty_0),
     .reset_rtl(reset_rtl_0),

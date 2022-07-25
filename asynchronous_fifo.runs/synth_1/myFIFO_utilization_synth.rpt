@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Wed Jul 20 19:48:04 2022
+| Date         : Sun Jul 24 18:57:54 2022
 | Host         : panther running 64-bit major release  (build 9200)
 | Command      : report_utilization -file myFIFO_utilization_synth.rpt -pb myFIFO_utilization_synth.pb
 | Design       : myFIFO
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   12 |     0 |     53200 |  0.02 |
-|   LUT as Logic          |   12 |     0 |     53200 |  0.02 |
+| Slice LUTs*             |   20 |     0 |     53200 |  0.04 |
+|   LUT as Logic          |   20 |     0 |     53200 |  0.04 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         |   10 |     0 |    106400 | <0.01 |
-|   Register as Flip Flop |   10 |     0 |    106400 | <0.01 |
+| Slice Registers         |   11 |     0 |    106400 |  0.01 |
+|   Register as Flip Flop |   11 |     0 |    106400 |  0.01 |
 |   Register as Latch     |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |     13300 |  0.00 |
@@ -55,7 +55,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 10    |          Yes |           - |        Reset |
+| 11    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 0     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -146,15 +146,15 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDCE     |   10 |        Flop & Latch |
+| FDCE     |   11 |        Flop & Latch |
+| LUT5     |    9 |                 LUT |
 | IBUF     |    9 |                  IO |
 | OBUF     |    7 |                  IO |
+| LUT4     |    6 |                 LUT |
 | LUT6     |    5 |                 LUT |
-| LUT5     |    4 |                 LUT |
-| LUT2     |    3 |                 LUT |
-| LUT4     |    2 |                 LUT |
-| LUT3     |    2 |                 LUT |
-| LUT1     |    1 |                 LUT |
+| LUT2     |    5 |                 LUT |
+| LUT3     |    3 |                 LUT |
+| LUT1     |    3 |                 LUT |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
